@@ -24,6 +24,7 @@ from IPVC10 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+	path('', views.IndexView.as_view()),
     path('IPVC10/', include('IPVC10.urls')),
 	path('user_login/', views.user_login, name='user_login'),
     path('logout/', auth_views.logout, {'template_name': 'index.html'}, name="logout"),
