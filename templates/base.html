@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OM Charitable Trust</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/IPVC10.css' %}" />
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script language="javascript" href="{% static 'js/custom.js' %}" ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-dark" style="background-color: #374F38;">
+      <a class="navbar-brand" href="#" style="color: #FFFFFF;font-style: bold">
+        <img src="{% static "/images/logo.png" %}" width="30" height="30" alt="Logo">  10th Inter Patashala Vedic Competition 2018 Registration
+        </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                  <p style="color: #FFFFFF;font-style: bold;display:inline_block">Hello {{ user.get_username }} !</p>
+                  <a class="nav-item nav-link" href="{% url 'logout' %}" style="color:#B0DB43;font-style: bold">LogOut</a>
+                {% else %}
+                  <li><a class="nav-item nav-link" href="{% url 'IPVC10:user_login' %}" style="color: #FFFFFF;font-style: bold">Log In</a><li>
+                {% endif %}
+              </div>
+            </div>
+    </nav>
+        <div class="col-md-12 background">
+           {% include 'messages.html' %}
+           {% block body_block %}
+            <!-- Anything outside of this will be inherited if you extend -->
+            {% endblock %}
+        </div>
+  </body>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+</html>
+</html>

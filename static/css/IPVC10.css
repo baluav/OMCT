@@ -1,0 +1,58 @@
+.background {
+  /*background-image: url("../images/bg-home.jpg");*/
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  font-size:2em;
+  text-align: center;
+  color:#525252;
+}
+
+
+/* Login page related styles  */
+.box {
+  background: transparent;
+  width:300px;
+  border-radius:6px;
+  margin: 0 auto 0 auto;
+  padding:0px 0px 70px 0px;
+  padding-top: 30px;
+  border-style: none;
+  color: #374F38;
+}
+
+.button-general {
+  /*font-family: 'Courgette', cursive;*/
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left: 5px;
+  color:white;
+  border-radius:4px;
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:16px;
+  font-weight:600;
+  font-size:0.9em;
+}
+
+.login-button {
+  background:#374F38;
+  border: #374F38 1px solid;
+}
+
+.cancel-button {
+  background: #374F38;
+  border: #374F38 1px solid;
+}
+
+.btn:hover{
+  background:#374F38;
+  border: #374F38 1px solid;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Patashala Details </h1>
+
+  <p><strong>Name:</strong> {{ patashala.name }}</a></p>
+  <p><strong>Address:</strong> {{ patashala.address }}</p>
+  <p><strong>City:</strong> {{ patashala.city }}</p>
+  <p><strong>State:</strong> {{ patashala.state }}</p>
+  <p><strong>Pincode:</strong> {{ patashala.pincode }}</p>
+  <p><strong>Primary Contact Number: </strong> {{ patashala.phone1 }}</p>
+  <p><strong>Secondary Contact Number: </strong> {{ patashala.phone2 }} </p>
+  <p><strong>Number of Students in Patashala: </strong> {{ patashala.num_students }}</p>
+{% endblock %}

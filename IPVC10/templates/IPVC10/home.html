@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+<div class="container" style="padding-top:20px">
+  <form method="POST">
+    {% csrf_token %}
+
+      <div class="row landing-box">
+          <div class="col-lg-4">
+            <div class="card card-inverse card-success mb-3" style="width:300px;">
+              <img class="card-img-top" src="{% static "images/patashala.jpg" %}" alt="Card image" style="width:100%; border-radius: 50%;">
+              <div class="card-body">
+                <h4 class="card-title">Patashala</h4>
+                <p class="card-text">Choose an option below</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card card-inverse card-success mb-3" style="width:300px;">
+              <img class="card-img-top" src="{% static "images/student.jpg" %}" alt="Card image" style="width:100%; border-radius: 50%;">
+              <div class="card-body">
+                <h4 class="card-title">Student</h4>
+                <p class="card-text">Choose an option below</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="row">
+      <div id="registerbuttons" class="col-lg-4">
+        <a href="{% url "IPVC10:patashala-add" %}" class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-plus"></span>Add
+        </a>
+
+        <a href="{% url "IPVC10:patashalas" %}" class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-pencil"></span>List
+        </a>
+
+      </div>
+
+      <div id="registerbuttons" class="col-lg-4">
+        <a href="{% url "IPVC10:student-add" %}" class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-plus"></span>Add
+        </a>
+
+        <a href="{% url "IPVC10:students" %}" class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-pencil"></span>List
+        </a>
+
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<div class="container" style="padding-top:20px">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-lg-12">
+    <h2>Patashala Details</h2>
+    <form method="POST">
+        {% csrf_token %}
+      <p><strong>Name:</strong> {{ patashala_detail.name }}</a></p>
+      <p><strong>Address:</strong> {{ patashala_detail.address }}</p>
+      <p><strong>City:</strong> {{ patashala_detail.city }}</p>
+      <p><strong>State:</strong> {{ patashala_detail.state }}</p>
+      <p><strong>Pincode:</strong> {{ patashala_detail.pincode }}</p>
+      <p><strong>Primary Contact Number: </strong> {{ patashala_detail.phone1 }}</p>
+      <p><strong>Secondary Contact Number: </strong> {{ patashala_detail.phone2 }} </p>
+      <p><strong>Number of Students in Patashala: </strong> {{ patashala_detail.num_students }}</p>
+      <a class='btn btn-success' href='{% url 'IPVC10:patashala-update' pk=patashala_detail.pk %}'>Update</a>
+      <a href="{% url "IPVC10:patashalas" %}" class="btn btn-success">Back to List</a>
+      <a href="{% url "IPVC10:user_home" %}" class="btn btn-success">Back Home</a>
+    </form>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock %}
